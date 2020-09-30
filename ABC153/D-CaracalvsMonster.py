@@ -1,18 +1,25 @@
+# ABC153
+# 問題文
+# カラカルはモンスターと戦っています。
+
+# モンスターの体力は Hです。
+# カラカルはモンスターを 1体選んで攻撃することができます。モンスターを攻撃したとき、攻撃対象のモンスターの体力に応じて、次のどちらかが起こります。
+
+# モンスターの体力が 1なら、そのモンスターの体力は0になる
+# モンスターの体力がX>1なら、そのモンスターは消滅し、体力が⌊X/2⌋のモンスターが新たに2体現れる（⌊r⌋はrを超えない最大の整数を表す）
+
+# 全てのモンスターの体力を0以下にすればカラカルの勝ちです。
+# カラカルがモンスターに勝つまでに行う攻撃の回数の最小値を求めてください。
+
+
+
 H = int(input())
 
-Alist = []
-Alist.append(H)
-count = 0
-while len(Alist)>0:
-  if Alist[0]==1:
-    count+=1
-    del Alist[0]
-    #if len(Alist)==0:
-     # break
-  else:
-    count+=1
-    Alist.append(Alist[0]//2)
-    Alist.append(Alist[0]//2)
-    del Alist[0]
-  
-print (count)
+i =0
+temp = 0 
+while True:
+  if 2**(i)<=H and H<2**(i+1):
+    temp = 2**(i)
+    break
+  i+=1
+print (temp*2-1)
