@@ -17,4 +17,5 @@ blist = divisor(B)
 anslist = sorted(list(set(alist) & set(blist)),reverse=True)
 
 #print (anslist)
+
 print (anslist[C-1])
