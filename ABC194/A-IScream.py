@@ -1,4 +1,4 @@
-A,B = map(int,input().split())
+SA,B = map(int,input().split())
 
 if A+B>=15 and B>=8:
   print(1)
