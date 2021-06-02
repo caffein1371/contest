@@ -7,3 +7,4 @@ elif a==c:
   print (b)
 else:
   print (0)
+  
