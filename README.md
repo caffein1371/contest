@@ -1,2 +1,0 @@
-# contest
-programing competition
